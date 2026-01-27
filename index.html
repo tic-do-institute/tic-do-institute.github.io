@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-DO Institute | Computational Modeling of Biological Systems</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-family: "Georgia", serif;
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            margin-top: 5px;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .publication-item {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+        }
+        .pub-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .pub-author {
+            font-style: italic;
+            color: #555;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .status-badge {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        .links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            font-size: 0.95rem;
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>TIC-DO Institute</h1>
+        <div class="subtitle">Laboratory for Computational Modeling of Biological Systems</div>
+    </header>
+
+    <section id="about">
+        <h2>About the Institute</h2>
+        <p>
+            TIC-DO Institute is an independent research organization dedicated to the computational modeling of biological systems. We investigate the mechanisms of maladaptive stability and phase transitions in the human nervous system through the lens of the Free Energy Principle and Active Inference.
+        </p>
+        <p>
+            Our primary focus is to elucidate how informational dynamics influence somatic regulation, specifically identifying the computational failures that lead to "frozen" metastable attractors in physiological states.
+        </p>
+    </section>
+
+    <section id="current-research">
+        <h2>Current Research</h2>
+        <div class="publication-item">
+            <span class="pub-title">Informational Perturbation Reverses Precision Collapse in a Metastable Proprioceptive Inference Regime</span>
+            <span class="pub-author">Takafumi Shiga</span>
+            <div style="margin-top: 10px; margin-bottom: 10px;">
+                <span class="status-badge">Under Review</span>
+            </div>
+            <p style="font-size: 0.9rem; color: #444;">
+                This study characterizes a mechanistically specified failure mode of active inference, termed Proprioceptive Prediction Error Neglect (PPEN). Using a multi-study framework (RCT, crossover, and ecological validation, N=106), we demonstrate that these states behave as metastable attractors driven by precision collapse and can be modulated via discrete informational phase transitions.
+            </p>
+            <div class="links">
+                <a href="https://github.com/tic-do-institute" target="_blank">View Code & Protocol (GitHub) &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>
+                <strong>General Inquiries & Research Collaboration:</strong><br>
+                tic.do.institute@proton.me
+            </p>
+            <p>
+                <strong>Location:</strong><br>
+                Tokyo, Japan
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 TIC-DO Institute. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
