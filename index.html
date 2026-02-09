@@ -3,112 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TIC-DO Institute | Laboratory for Computational Modeling of Biological Systems. Researching Active Inference and Defensive Functional Decoupling.">
+    <meta name="author" content="Takafumi Shiga">
     <title>TIC-DO Institute | Computational Modeling of Biological Systems</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
+            --primary-color: #2c3e50; /* Dark Slate Blue for headings */
+            --accent-color: #3498db;  /* Blue for links/accents */
+            --text-color: #333;       /* Dark Grey for body text */
+            --bg-color: #f9f9f9;      /* Light Grey background */
+            --white: #ffffff;
+            --badge-review: #e74c3c;  /* Red for Under Review */
+            --badge-ongoing: #27ae60; /* Green for Ongoing */
         }
+
         body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
+            -webkit-font-smoothing: antialiased;
         }
+
+        /* Layout Container */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            padding: 50px 30px;
+            background-color: var(--white);
+            box-shadow: 0 0 30px rgba(0,0,0,0.03);
             min-height: 100vh;
         }
+
+        /* Header Area */
         header {
             border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            padding-bottom: 30px;
+            margin-bottom: 50px;
         }
+
         h1 {
-            font-family: "Georgia", serif;
+            font-family: "Georgia", "Times New Roman", serif;
             color: var(--primary-color);
             margin: 0;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             letter-spacing: -0.5px;
+            font-weight: 700;
         }
+
         .subtitle {
             font-size: 1.1rem;
             color: #666;
             font-weight: 300;
-            margin-top: 5px;
+            margin-top: 8px;
+            font-family: "Helvetica Neue", Arial, sans-serif;
         }
+
+        /* Section Styling */
         section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
+
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
             border-left: 4px solid var(--accent-color);
             padding-left: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-weight: 600;
         }
+
         p {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             text-align: justify;
+            font-size: 1rem;
+            color: #444;
         }
-        .publication-item {
+
+        /* Publication / Project Item Card */
+        .project-card {
             background-color: #f8f9fa;
-            padding: 20px;
+            padding: 25px;
             border: 1px solid #e9ecef;
-            border-radius: 4px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .pub-title {
-            font-weight: bold;
-            font-size: 1.1rem;
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1.15rem;
             display: block;
-            margin-bottom: 5px;
+            margin: 10px 0 5px 0;
+            color: var(--primary-color);
+            line-height: 1.4;
         }
-        .pub-author {
+
+        .project-meta {
             font-style: italic;
-            color: #555;
+            color: #666;
+            font-size: 0.9rem;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
+
+        /* Status Badges */
         .status-badge {
             display: inline-block;
-            background-color: #2c3e50;
             color: white;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 0.8rem;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
+
+        .badge-review { background-color: var(--badge-review); }
+        .badge-ongoing { background-color: var(--badge-ongoing); }
+
+        /* Links */
+        .links {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+
         .links a {
             color: var(--accent-color);
             text-decoration: none;
-            margin-right: 15px;
+            margin-right: 20px;
             font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
         }
+
         .links a:hover {
             text-decoration: underline;
         }
-        .contact-info {
-            font-size: 0.95rem;
+
+        /* Contact Section */
+        .contact-info p {
+            margin-bottom: 10px;
+            text-align: left;
         }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            width: 120px;
+            display: inline-block;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 60px;
-            padding-top: 20px;
+            margin-top: 80px;
+            padding-top: 25px;
             border-top: 1px solid #eee;
             text-align: center;
             font-size: 0.8rem;
-            color: #888;
+            color: #999;
         }
+
+        /* Mobile Responsiveness */
         @media (max-width: 600px) {
-            .container { padding: 20px; }
+            .container { padding: 25px 20px; }
             h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.3rem; }
+            .contact-label { display: block; margin-bottom: 2px; }
         }
     </style>
 </head>
@@ -123,39 +193,59 @@
     <section id="about">
         <h2>About the Institute</h2>
         <p>
-            TIC-DO Institute is an independent research organization dedicated to the computational modeling of biological systems. We investigate the mechanisms of maladaptive stability and phase transitions in the human nervous system through the lens of the Free Energy Principle and Active Inference.
+            TIC-DO Institute is an independent research organization dedicated to the computational modeling of biological systems. We investigate the mechanisms of maladaptive stability and phase transitions in the human sensorimotor system through the lens of the Free Energy Principle and Active Inference.
         </p>
         <p>
-            Our primary focus is to elucidate how informational dynamics influence somatic regulation, specifically identifying the computational failures that lead to "frozen" metastable attractors in physiological states.
+            Our mission is to bridge the gap between theoretical biophysics and clinical phenomenology. Specifically, we focus on elucidating how informational dynamics influence somatic regulation, identifying the computational failures that lead to "frozen" metastable attractors in physiological states, and developing theoretical frameworks for their resolution.
         </p>
     </section>
 
-    <section id="current-research">
-        <h2>Current Research</h2>
-        <div class="publication-item">
-            <span class="pub-title">Informational Perturbation Reverses Precision Collapse in a Metastable Proprioceptive Inference Regime</span>
-            <span class="pub-author">Takafumi Shiga</span>
-            <div style="margin-top: 10px; margin-bottom: 10px;">
-                <span class="status-badge">Under Review</span>
-            </div>
-            <p style="font-size: 0.9rem; color: #444;">
-                This study characterizes a mechanistically specified failure mode of active inference, termed Proprioceptive Prediction Error Neglect (PPEN). Using a multi-study framework (RCT, crossover, and ecological validation, N=106), we demonstrate that these states behave as metastable attractors driven by precision collapse and can be modulated via discrete informational phase transitions.
+    <section id="research">
+        <h2>Research Projects</h2>
+
+        <div class="project-card">
+            <span class="status-badge badge-review">Under Review</span>
+            <span class="project-title">Theoretical Framework: Bistable Precision Dynamics and Defensive Functional Decoupling</span>
+            <span class="project-meta">Principal Investigator: Takafumi Shiga</span>
+            
+            <p>
+                This project establishes the computational foundation of chronic functional disorders. By integrating Active Inference with a Kuramoto model of coupled oscillators, we demonstrate how "Defensive Functional Decoupling" emerges as a metastable attractor driven by precision collapse. The study theoretically proves that recovery requires "Specific Informational Perturbation (SIP)"—a transient salience spike—rather than mechanical forcing, resolving the thermodynamic paradox of functional immobility.
             </p>
+            
             <div class="links">
-                <a href="https://github.com/tic-do-institute/SAIM_PhaseTransition_Analysis" target="_blank">View Code & Protocol (GitHub) &rarr;</a>
+                <a href="https://github.com/tic-do-institute/SAIM_PhaseTransition_Analysis" target="_blank">View Simulation Code (GitHub) &rarr;</a>
             </div>
         </div>
+
+        <div class="project-card">
+            <span class="status-badge badge-ongoing">Ongoing / Data Collection</span>
+            <span class="project-title">Empirical Validation: Randomized Controlled Trial on Proprioceptive Prediction Error Neglect</span>
+            <span class="project-meta">Principal Investigator: Takafumi Shiga (N=106)</span>
+            
+            <p>
+                A large-scale empirical study (RCT and crossover design) aimed at validating the theoretical predictions of the Defensive Functional Decoupling model. We are currently analyzing kinematic data to identify the statistical signatures of critical slowing down (CSD) and to evaluate the efficacy of informational perturbation in human subjects. This project serves as the experimental counterpart to our theoretical computational models.
+            </p>
+            
+            <div class="links">
+                <span style="font-size: 0.9rem; color: #888;">Expected Completion: 2026</span>
+            </div>
+        </div>
+
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
         <div class="contact-info">
             <p>
-                <strong>General Inquiries & Research Collaboration:</strong><br>
-                tic.do.institute@proton.me
+                <span class="contact-label">Principal Investigator:</span>
+                Takafumi Shiga
             </p>
             <p>
-                <strong>Location:</strong><br>
+                <span class="contact-label">Email:</span>
+                <a href="mailto:tic.do.institute@proton.me" style="color:var(--accent-color); text-decoration:none;">tic.do.institute@proton.me</a>
+            </p>
+            <p>
+                <span class="contact-label">Location:</span>
                 Tokyo, Japan
             </p>
         </div>
