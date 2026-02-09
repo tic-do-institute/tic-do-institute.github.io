@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TIC-DO Institute | Laboratory for Computational Modeling of Biological Systems. Researching Active Inference and Defensive Functional Decoupling.">
+    <meta name="description" content="TIC-DO Institute | Laboratory for Computational Modeling of Biological Systems.">
     <meta name="author" content="Takafumi Shiga">
     <title>TIC-DO Institute | Computational Modeling of Biological Systems</title>
     <style>
         :root {
-            --primary-color: #2c3e50; /* Dark Slate Blue for headings */
-            --accent-color: #3498db;  /* Blue for links/accents */
-            --text-color: #333;       /* Dark Grey for body text */
-            --bg-color: #f9f9f9;      /* Light Grey background */
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #fcfcfc;
             --white: #ffffff;
-            --badge-review: #e74c3c;  /* Red for Under Review */
-            --badge-ongoing: #27ae60; /* Green for Ongoing */
+            --badge-review: #d35400;
+            --badge-ongoing: #27ae60;
         }
 
         body {
@@ -27,17 +27,16 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Layout Container */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 50px 30px;
+            padding: 60px 30px;
             background-color: var(--white);
-            box-shadow: 0 0 30px rgba(0,0,0,0.03);
             min-height: 100vh;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
         }
 
-        /* Header Area */
         header {
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 30px;
@@ -48,26 +47,24 @@
             font-family: "Georgia", "Times New Roman", serif;
             color: var(--primary-color);
             margin: 0;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             letter-spacing: -0.5px;
             font-weight: 700;
         }
 
         .subtitle {
-            font-size: 1.1rem;
+            font-size: 1.0rem;
             color: #666;
-            font-weight: 300;
             margin-top: 8px;
             font-family: "Helvetica Neue", Arial, sans-serif;
         }
 
-        /* Section Styling */
         section {
             margin-bottom: 60px;
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--primary-color);
             border-left: 4px solid var(--accent-color);
             padding-left: 15px;
@@ -82,26 +79,26 @@
             color: #444;
         }
 
-        /* Publication / Project Item Card */
         .project-card {
             background-color: #f8f9fa;
             padding: 25px;
             border: 1px solid #e9ecef;
             border-radius: 6px;
             margin-bottom: 30px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .project-card:hover {
             transform: translateY(-2px);
+            border-color: #dbe2e8;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .project-title {
             font-weight: 700;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             display: block;
-            margin: 10px 0 5px 0;
+            margin: 12px 0 6px 0;
             color: var(--primary-color);
             line-height: 1.4;
         }
@@ -114,13 +111,12 @@
             margin-bottom: 15px;
         }
 
-        /* Status Badges */
         .status-badge {
             display: inline-block;
             color: white;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -129,7 +125,6 @@
         .badge-review { background-color: var(--badge-review); }
         .badge-ongoing { background-color: var(--badge-ongoing); }
 
-        /* Links */
         .links {
             margin-top: 20px;
             padding-top: 15px;
@@ -139,7 +134,7 @@
         .links a {
             color: var(--accent-color);
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 25px;
             font-weight: 500;
             font-size: 0.9rem;
             display: inline-flex;
@@ -150,7 +145,6 @@
             text-decoration: underline;
         }
 
-        /* Contact Section */
         .contact-info p {
             margin-bottom: 10px;
             text-align: left;
@@ -159,11 +153,10 @@
         .contact-label {
             font-weight: 600;
             color: var(--primary-color);
-            width: 120px;
+            width: 150px;
             display: inline-block;
         }
 
-        /* Footer */
         footer {
             margin-top: 80px;
             padding-top: 25px;
@@ -173,11 +166,9 @@
             color: #999;
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 600px) {
-            .container { padding: 25px 20px; }
+            .container { padding: 30px 20px; }
             h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.3rem; }
             .contact-label { display: block; margin-bottom: 2px; }
         }
     </style>
@@ -205,7 +196,7 @@
 
         <div class="project-card">
             <span class="status-badge badge-review">Under Review</span>
-            <span class="project-title">Theoretical Framework: Bistable Precision Dynamics and Defensive Functional Decoupling</span>
+            <span class="project-title">Theoretical Framework: Bistable Precision Dynamics and Informational Reversal: A Computational Mechanism of Functional Decoupling</span>
             <span class="project-meta">Principal Investigator: Takafumi Shiga</span>
             
             <p>
@@ -213,21 +204,25 @@
             </p>
             
             <div class="links">
-                <a href="https://github.com/tic-do-institute/Defensive-Functional-Decoupling-Model" target="_blank">View Simulation Code (GitHub) &rarr;</a>
+                <a href="https://github.com/tic-do-institute/Defensive-Functional-Decoupling-Model" target="_blank">
+                    &#9656; View Simulation Code (GitHub)
+                </a>
             </div>
         </div>
 
         <div class="project-card">
             <span class="status-badge badge-ongoing">Ongoing / Data Collection</span>
             <span class="project-title">Empirical Validation: Randomized Controlled Trial on Proprioceptive Prediction Error Neglect</span>
-            <span class="project-meta">Principal Investigator: Takafumi Shiga (N=106)</span>
+            <span class="project-meta">Principal Investigator: Takafumi Shiga (N=106) | Registered ID: UMIN000060274</span>
             
             <p>
                 A large-scale empirical study (RCT and crossover design) aimed at validating the theoretical predictions of the Defensive Functional Decoupling model. We are currently analyzing kinematic data to identify the statistical signatures of critical slowing down (CSD) and to evaluate the efficacy of informational perturbation in human subjects. This project serves as the experimental counterpart to our theoretical computational models.
             </p>
             
             <div class="links">
-                <span style="font-size: 0.9rem; color: #888;">Expected Completion: 2026</span>
+                <a href="https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000065095" target="_blank">
+                    &#9656; View Clinical Trial Registry (UMIN-CTR)
+                </a>
             </div>
         </div>
 
@@ -242,7 +237,7 @@
             </p>
             <p>
                 <span class="contact-label">Email:</span>
-                <a href="mailto:tic.do.institute@proton.me" style="color:var(--accent-color); text-decoration:none;">tic.do.institute@proton.me</a>
+                <a href="mailto:tic.do.institute@proton.me" style="color:#3498db; text-decoration:none;">tic.do.institute@proton.me</a>
             </p>
             <p>
                 <span class="contact-label">Location:</span>
