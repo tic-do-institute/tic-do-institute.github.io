@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TIC-DO Institute | Laboratory for Computational Modeling of Biological Systems.">
+    <meta name="description" content="TIC-DO Institute | Laboratory for Computational Modeling of Biological Systems. Investigating the thermodynamics of neural gain dynamics and active inference.">
     <meta name="author" content="Takafumi Shiga">
+    <meta property="og:title" content="TIC-DO Institute | Computational Modeling of Biological Systems">
+    <meta property="og:description" content="Laboratory investigating maladaptive stability and phase transitions in the human sensorimotor system via Active Inference.">
+    <meta property="og:type" content="website">
     <title>TIC-DO Institute | Computational Modeling of Biological Systems</title>
     <style>
         :root {
@@ -15,6 +18,7 @@
             --white: #ffffff;
             --badge-review: #d35400;
             --badge-ongoing: #27ae60;
+            --border-color: #eee;
         }
 
         body {
@@ -33,8 +37,9 @@
             padding: 60px 30px;
             background-color: var(--white);
             min-height: 100vh;
-            border-left: 1px solid #eee;
-            border-right: 1px solid #eee;
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            box-sizing: border-box;
         }
 
         header {
@@ -85,7 +90,7 @@
             border: 1px solid #e9ecef;
             border-radius: 6px;
             margin-bottom: 30px;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .project-card:hover {
@@ -139,10 +144,12 @@
             font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
+            transition: color 0.2s ease;
         }
 
         .links a:hover {
             text-decoration: underline;
+            color: #2980b9;
         }
 
         .contact-info p {
@@ -160,14 +167,14 @@
         footer {
             margin-top: 80px;
             padding-top: 25px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid var(--border-color);
             text-align: center;
             font-size: 0.8rem;
             color: #999;
         }
 
         @media (max-width: 600px) {
-            .container { padding: 30px 20px; }
+            .container { padding: 30px 20px; border: none; }
             h1 { font-size: 1.8rem; }
             .contact-label { display: block; margin-bottom: 2px; }
         }
@@ -196,15 +203,15 @@
 
         <div class="project-card">
             <span class="status-badge badge-review">Under Review</span>
-            <span class="project-title">Theoretical Framework: Bistable Precision Dynamics and Informational Reversal: A Computational Mechanism of Functional Decoupling</span>
+            <span class="project-title">Theoretical Framework: A Zero-Efficiency Regime Explains Irreversible Gain Collapse in the Locus Coeruleus</span>
             <span class="project-meta">Principal Investigator: Takafumi Shiga</span>
             
             <p>
-                This project establishes the computational foundation of chronic functional disorders. By integrating Active Inference with a Kuramoto model of coupled oscillators, we demonstrate how "Defensive Functional Decoupling" emerges as a metastable attractor driven by precision collapse. The study theoretically proves that recovery requires "Specific Informational Perturbation (SIP)"—a transient salience spike—rather than mechanical forcing, resolving the thermodynamic paradox of functional immobility.
+                This project establishes the computational foundation of chronic functional disorders. By integrating Active Inference with a Kuramoto model of coupled oscillators, we demonstrate how "Defensive Functional Decoupling" emerges as a metastable attractor driven by precision collapse. The study theoretically proves that recovery requires "Specific Informational Perturbation (SIP)"—a transient salience spike characterized by high-jerk dynamics—rather than mechanical forcing, resolving the thermodynamic paradox of functional immobility.
             </p>
             
             <div class="links">
-                <a href="https://github.com/tic-do-institute/Defensive-Functional-Decoupling-Model" target="_blank">
+                <a href="https://github.com/tic-do-institute/Functional-Decoupling-Model" target="_blank" aria-label="View simulation code on GitHub">
                     &#9656; View Simulation Code (GitHub)
                 </a>
             </div>
@@ -219,7 +226,7 @@
                 A large-scale empirical study (RCT and crossover design) aimed at validating the theoretical predictions of the Defensive Functional Decoupling model. We are currently analyzing kinematic data to identify the statistical signatures of critical slowing down (CSD) and to evaluate the efficacy of informational perturbation in human subjects. This project serves as the experimental counterpart to our theoretical computational models.
             </p>
             
-            </div>
+        </div>
 
     </section>
 
